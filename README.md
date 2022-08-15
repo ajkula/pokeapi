@@ -17,6 +17,12 @@ It's a trade off that I picked to make the persist part of the store easier in p
 cross-arrays finds operations.
 For that reason I preferred to use the ```Array.prototype.find.apply(...)``` method.\
 
+## What I could've done, but not *really* in the requirements
+
+I wanted to make the cards colors mapped to the pokemon's type...
+Also I started, but didn't go further, to make a favorites management page...
+It's on ```/favorites ``` but don't get there it's ridiculous! :(
+
 ## My personal long time favorite
 
 I love to use ***[Async from Caolan McMahon](https://caolan.github.io/async/v3/)*** which has always been great regarding memory footprint and execution speedany ***Nodejs*** or front-end projects. 
