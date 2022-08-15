@@ -1,0 +1,17 @@
+.styles {
+  display: flex;
+  width: 20%;
+  background-color: #1AEF;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  float:left;
+}
+
+span {
+  margin: 10px;
+  font-size: larger;
+  font-weight: bolder;
+}

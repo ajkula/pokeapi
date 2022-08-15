@@ -1,58 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
+import React, { Component } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { config }      from './config';
+import { connect } from 'react-redux';
+import NavCol from './views/NavCol';
+import Pokemons from './views/Pokemons';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+import withRouter from './components/withRouter';
+
+const Favorites = () => <div>FAVORITES LIST</div>
+
+class App extends Component {
+
+  render() {
+    return (
+      <div className='flexbox'>
+        <NavCol className='left' />
+        <div className='right'>
+          <h1>POKEMON</h1>
+            <Routes>
+              <Route  path={config.path.pokemons} element={<Pokemons />} />
+              <Route exact path={config.path.favorites} element={<Favorites />} />
+            </Routes>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    default: state.default
+  };
+}
+
+export default withRouter(connect(mapStateToProps, {  })(App));

@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+  min-width: 100%;
+  min-height:766px;
+  max-height:766px;
+  overflow:auto;
+}
+
+.topLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pokecard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: chocolate;
+  color: whitesmoke;
+  padding: 5px;
+  border-style: solid chocolate 2px;
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.pokeImage {
+  position: relative;
+  float: right;
+  min-width: 80px;
+  margin-top: -10px;
+  margin-left: 3rem;
+  transition: transform .7s ease-in-out;
+}
+
+
+.pokeImage:hover {
+  transform: rotate(360deg);
+}
+
+.pokeSkill {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 0.6rem;
+  padding: 8px;
+  padding-left: 15px;
+  text-align: left;
+  margin-top: -20px;
+}
