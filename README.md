@@ -1,6 +1,6 @@
 # Izberg PokeApi technical Test
 
-Thank you for your time reviewing my test,\
+**Thank you** for your time reviewing my test,\
 please be patient and consider the fact I've been doing Java/Spring\
 work in my actual company for the last year and I haven't really worked on full\
 front project since a year and half. So this code is me grinding **hard** to make something OK
