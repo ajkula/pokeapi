@@ -1,0 +1,19 @@
+
+.topLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3px;
+  width: 200px;
+  height: fit-content;
+  margin: 5px;
+  padding: 2px;
+  color: antiquewhite;
+  background-color: orange;
+}

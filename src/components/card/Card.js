@@ -23,10 +23,10 @@ const Card = (props) => {
   };
 
   return (
-  <div className="pokecard" onClick={onClickHandler}>
+  <div className="pokecard">
     <div className="topLine">
       <span>{pokemon.name}</span>
-      <FontAwesomeIcon icon={checkBox} color="white" border />
+      <FontAwesomeIcon icon={checkBox} color="white" border onClick={onClickHandler} />
     </div>
     <img className='pokeImage' src={pokemon.sprite} alt={pokemon.name} />
     <span className="pokeSkill">{pokemon.type.join(" + ")}</span>
