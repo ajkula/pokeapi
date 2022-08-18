@@ -4,7 +4,7 @@ import Fav from '../../components/favorite/Fav';
 
 const FavLayout = ({ favorites }) => {
   return (
-  <div className='container' >
+  <div className='favContainer' >
     {favorites.data.map((favorite, key) => <Fav key={key} favorite={favorite} />)
       }
   </div>)
