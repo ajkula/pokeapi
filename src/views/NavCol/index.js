@@ -24,7 +24,6 @@ class NavCol extends Component {
 
   render() {
     const btnStyle = {margin: "5px"};
-    const { pokemons } = this.props;
 
     return (
       <div className='styles'>
