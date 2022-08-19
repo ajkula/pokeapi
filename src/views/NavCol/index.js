@@ -11,7 +11,6 @@ class NavCol extends Component {
   }
   
   clickHandler = () => {
-    console.log(this.props.pokemons.next);
     this.props.fetchMorePokemons(this.props.pokemons.next);
   }
 
@@ -24,18 +23,20 @@ class NavCol extends Component {
   }
 
   render() {
-    const btnStyle = {margin: "5px"}
-  return (
-    <div className='styles'>
-    <span>Izberg</span>
-    <span>PokeApi</span>
-    <span>Test</span>
-    <div style={{display: "flex", flexDirection: "column", marginTop: "70%"}}>
-      {this.props.location.pathname === "/" && <button className='btn btn-danger' style={btnStyle} onClick={this.clickHandler} >Fetch more</button>}
-      <button className='btn btn-info' style={btnStyle} onClick={this.goToPokemons} >Go to Pokemons</button>
-      <button className='btn btn-success' style={btnStyle} onClick={this.goToFavorites} >Go to Favorites</button>
-    </div>
-    </div>);
+    const btnStyle = {margin: "5px"};
+    const { pokemons } = this.props;
+
+    return (
+      <div className='styles'>
+      <span>Izberg</span>
+      <span>PokeApi</span>
+      <span>Test</span>
+      <div style={{display: "flex", flexDirection: "column", marginTop: "70%"}}>
+        {this.props.location.pathname === "/" && <button  className='btn btn-danger' style={btnStyle} onClick={this.clickHandler} >Fetch more</button>}
+        <button className='btn btn-info' style={btnStyle} onClick={this.goToPokemons} >Go to Pokemons</button>
+        <button className='btn btn-success' style={btnStyle} onClick={this.goToFavorites} >Go to Favorites</button>
+      </div>
+      </div>);
   }
 }
 

@@ -10,6 +10,7 @@ front project since a year and half. So this code is me grinding **hard** to mak
 It was nice to see ***redux-persist***.
 I had a few struggle to find out the right configuration since their documentation\
 seemed a bit outdated.
+Also since it uses the locale storage by default, it shouldn't contain any sensitive informations.
 
 ## Trade-off
 Performance-wise the code isn't so great and wouldn't fit for a huge app.\
@@ -20,8 +21,9 @@ For that reason I preferred to use the ```Array.prototype.find.apply(...)``` met
 ## What I could've done, but not *really* in the requirements
 
 I wanted to make the cards colors mapped to the pokemon's type...
-Also I started, but didn't go further, to make a favorites management page...
-It's on ```/favorites ``` but don't get there it's ridiculous! :(
+Also I starte to make a favorites management page...
+It still has a small bug when you remove a favorite but on refresh it's as it should be.
+It's on ```/favorites ```, accessible by the *go to favorites* button but it's ridiculous! :(
 
 ## My personal long time favorite
 
